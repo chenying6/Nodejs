@@ -1,3 +1,4 @@
+/*
 const buf = Buffer.from('runoob', 'ascii');
 console.log(buf.toString('ascii'));
 console.log(buf.toString('hex'));
@@ -47,3 +48,26 @@ const copy = JSON.parse(json, (key, value) => {
 
 // 输出: <Buffer 01 02 03 04 05>
 console.log(copy);
+
+var buffer1 = Buffer.from(('111'));
+var buffer2 = Buffer.from(('www.runoob.com'));
+var buffer3 = Buffer.concat([buffer1, buffer2]);
+console.log("buffer 3 内容: "+buffer3.toString());
+
+
+var buffer3 = Buffer.from('ABC');
+var buffer4 = Buffer.from('ABCD');
+var result=buffer3.compare(buffer4);
+if(result<0){
+  console.log(buffer1 + "在" + buffer2 +"之前");
+}
+else if(result==0)
+  console.log("same......");
+else{
+  console.log(bufer1+"is after "+buffer2);
+}
+
+var bufferSlice = Buffer.from('runboo');
+var buffers = bufferSlice.slice(0,2);
+console.log("buffer Slice content: (from 0 to 2)  "+buffers.toString());
+*/
