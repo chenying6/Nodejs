@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Relative Flow Example</title>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' ref='stylesheet' type='text/css'>
+        <style>
+            *{
+                box-sizing: border-box;
+                font-family:sans-serif;
+                font-weight: bold;
+                font-size: 14pt;
+            }
+            .bordered{
+                border:2px solid #2e3d49;
+            }
+            .parent{
+                background-color: #dbe2e8;
+                padding:8px;
+            }
+            .words{
+                background-color: #DFDFD1;
+            }
+            .relative{             
+                vertical-align:top;   
+                position:relative;
+                top:50px;
+            }
+            .sibling{
+                display: inline-block;
+                background-color: #15C26B;
+                width:150px;
+                height:100px;
+            }
+            .child{
+                background-color:#ffae0c;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            Parent
+            <br>
+            <div class="sibling bordered">Sibling</div> 
+            <div class="sibling relative bordered">
+                Relative Sibling
+                <div class="child bordered">Child</div>
+                <div class="child bordered">Child</div>
+            </div>
+            <div  class="sibling bordered">Sibling</div>
+        </div>
+        <span class="words">Sibling to the parent</span>
+    </body>
+</html>
